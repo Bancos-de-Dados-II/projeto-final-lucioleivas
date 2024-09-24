@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Editar</title>
+</head>
+<body>
+    <main>
+        <div id="map"></div>
+        <section class="formulario">
+            <label for="restaurante">Nome do Restaurante</label>
+            <input type="text" placeholder="digite o nome do restaurante" id="restaurante">
+            <label for="cliente">Nome do Cliente</label>
+            <input type="text" placeholder="digite o nome do cliente" id="cliente">
+            <label for="pedido">Pedido Realizado</label>
+            <input type="text" placeholder="digite a descrição do pedido" id="pedido">
+            <div class="align-btn">
+                <button class="btn btn-voltar"><a href="./index.html">voltar</a></button>
+                <button type="submit" class="btn" id="button-editar">enviar</button>
+            </div>
+            <span id="msg"></span>
+        </section>
+    </main>
+    <script type="module" src="./js/map.js" defer></script>
+    <script type="module" src="./js/editar.js" defer></script>
+</body>
+</html>

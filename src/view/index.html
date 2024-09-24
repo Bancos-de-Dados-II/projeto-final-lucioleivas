@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="menu">
+        <a class="links" href="./index.html">home</a>
+        <a class="links" href="./grafico.html">graficos</a>
+    </header>
+    <main >
+        <div id="map"></div>
+        <section class="formulario">
+            <label for="restaurante">Nome do Restaurante</label>
+            <input type="text" placeholder="digite o nome do restaurante" id="restaurante">
+            <label for="cliente">Nome do Cliente</label>
+            <input type="text" placeholder="digite o nome do cliente" id="cliente">
+            <label for="cpf">CPF do Cliente</label>
+            <input type="text" placeholder="digite o cpf do cliente" id="cpf">
+            <label for="pedido">Pedido Realizado</label>
+            <input type="text" placeholder="digite a descrição do pedido" id="pedido">
+            <button type="submit" class="btn" id="button">enviar</button>
+            <span id="msg"></span>
+        </section>
+        
+    </main>
+    <div class="pesquisar">
+        <input type="text" placeholder="digite o nome do cliente ou do restaurante" class="inp-pesquisar" id="search">
+        <button type="submit" class="btn-enviar" id="btn-enviar"><img src="./imagens/lupa.png" class="img-btn" alt=""></button>
+    </div>
+    <table class="tabela">
+        <thead class="tabela-cabecalho">
+            <tr>
+                <th>id</th>
+                <th>restaurante</th>
+                <th>cliente</th>
+                <th>CPF</th>
+                <th>descrição</th>
+                <th>latitude</th>
+                <th>longetude</th>
+            </tr>
+            <tbody id="dados"></tbody>
+        </thead>
+    </table>
+    <script type="module" src="./js/map.js" defer></script>
+    <script type="module" src="./js/script.js" defer></script>
+</body>
+</html>
